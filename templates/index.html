@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <!-- <meta charset="UTF-8"> -->
+  <title>Cat And Dog Classifer</title>
+  
+</head>
+
+<body>
+ <!-- <div class="login"> -->
+	<h1>Cat and Dog Classifier</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post" enctype="multipart/form-data">
+    	<label for="myfile">Select a file:</label>
+        <input type="file" name="image" accept="image/*" id="image" required>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ <!-- </div> -->
+
+
+</body>
+</html>
